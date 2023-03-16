@@ -1,0 +1,137 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("bookclub.jpeg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag"></span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Book<br>Club</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">Otish</span>
+  </div>
+</header>
+
+
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>My heart has a special spot for the Book Club Café. It's a warm, comfortable place where I can get out of the stresses of daily life and lose everything to the book world. This café stands out for its beautiful mix of literary culture, amazing food, and friendly service.</p>
+    <p>As soon as I walk in, a cheerful service person welcomes me and asks what my drink of choice is. The furnishings are attractive and inviting, with bookcases covering the walls, soft sofas, and lots of windows. It's the kind of place that tempts you to stay awhile, drift off, and lose yourself in a good book.</p>
+    <img src="coffe book.jpeg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 8pm.</p>
+    <p><strong>Address:</strong> 197 E 3rd St, New York, NY 10009
+    </p>
+  </div>
+</div>
+
+
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey"> $5.50</p><br>
+
+      <h5>Muffin</h5>
+      <p class="w3-text-grey"> $3.00</p><br>
+
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey"> $7.50</p><br>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">  $2.50</p><br>
+
+      <h5>Hot Coco</h5>
+      <p class="w3-text-grey">  $4.50</p><br>
+
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">  $5.00</p><br>
+
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">  $3.00</p><br>
+
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. $2.50</p>
+    </div>
+    <img src="bookstore.jpeg.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE</span></h5>
+    <img src="location.png" class="w3-image" style="width:100%">
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
